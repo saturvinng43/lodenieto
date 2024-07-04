@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Asociadas</title>
+    <link rel="stylesheet" href="./css/style_muebles.css">
+</head>
+<body class="loading-main">
+    <!-- Animación de carga -->
+    <div class="loader-container">
+        <div class="loader"></div> <!-- Spinner -->
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Empresas Asociadas</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresas.html">Mueblerias</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 style="text-align: center;">Mublerias central</h2> <!-- Título centrado -->
+        
+        <section class="companies">
+            <article class="company" onclick="location.href='https://muebleriascentral.com/collections/salas/products/sala-italia-3-2-1';">
+                <img src="./img/muebleria central/SALA ITALIA 3-2-1.webp" alt="Empresa 1">
+                <h2>SALA ITALIA 3-2-1</h2>
+            </article>
+            <article class="company" onclick="location.href='https://muebleriascentral.com/collections/salas/products/sala-malaga-3-2-1-plata-darka-silver';">
+                <img src="./img/muebleria central/SALA MALAGA PLATA.webp" alt="Empresa 2">
+                <h2>SALA MALAGA PLATA</h2>
+            </article>
+            <article class="company" onclick="location.href='https://muebleriascentral.com/collections/salas/products/sala-sevilla-seccional-imperial-khaki-fossil';">
+                <img src="./img/muebleria central/SALA SEVILLA SECCIONAL.webp" alt="Empresa 3">
+                <h2>SALA SEVILLA SECCIONAL</h2>
+            </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Super Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Simular tiempo de carga
+        setTimeout(function() {
+            const loaderContainer = document.querySelector('.loader-container');
+            const body = document.querySelector('body');
+
+            // Ocultar animación de carga
+            loaderContainer.style.opacity = '0';
+            loaderContainer.style.pointerEvents = 'none'; // Permitir interacción después de ocultar
+
+            // Mostrar contenido principal con transición
+            body.classList.remove('loading-main');
+            body.classList.add('loaded-main');
+        }, 2000); // 2000 milisegundos = 2 segundos
+    </script>
+</body>
+</html>

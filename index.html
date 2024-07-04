@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambientes Únicos</title>
+    <link rel="stylesheet" href="./css/styles_index.css">
+    <!-- Link to Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Ambientes Únicos</h1>
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="empresas.html">Mueblerías</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="welcome-message">
+            Bienvenido a Ambientes Únicos
+        </div>
+        <div class="section">
+            <img src="img/logo.png" alt="Logo" class="animated-image logo-image">
+            <div class="text">
+                Bienvenido a Ambientes Únicos, tu destino principal para encontrar muebles y decoración que transformarán tu hogar en un espacio único y acogedor.
+            </div>
+        </div>        
+        <div class="section">
+            <img src="img/mueble.png" alt="Mueble1" class="animated-image resizable">
+            <div class="text">
+                Desde 2024, nos hemos dedicado a seleccionar cuidadosamente cada pieza para ofrecerte la mejor calidad y variedad.
+            </div>
+        </div>
+        <div class="section">
+            <img src="img/muebles2.jpg" alt="Imagen 3" class="animated-image resizable">
+            <div class="text">
+                En Ambientes Únicos, entendemos que tu hogar es más que un lugar; es tu refugio personal, donde cada detalle cuenta.
+            </div>
+        </div>
+        <div class="section">
+            <img src="img/ayuda.avif" alt="Imagen 4" class="animated-image resizable">
+            <div class="text">
+                Nuestra misión es ayudarte a crear ambientes que reflejen tu estilo y personalidad, proporcionándote opciones que van desde lo clásico hasta lo contemporáneo.
+            </div>
+        </div>
+        <div class="section">
+            <img src="img/certidicado.jpg" alt="Imagen 5" class="animated-image resizable">
+            <div class="text">
+                Explora nuestro catálogo y descubre por qué en Ambientes Únicos nos esforzamos por ofrecerte más que muebles: ofrecemos la posibilidad de crear el hogar de tus sueños, un ambiente único para ti y tu familia.
+            </div>
+        </div>
+    </main>
+
+    <div class="brands-title">Marcas asociadas</div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/El_mueble_perfecto.png" alt="Marca 1" class="resizable"></div>
+            <div class="swiper-slide"><img src="./img/Gala.png" alt="Marca 2" class="resizable"></div>
+            <div class="swiper-slide"><img src="./img/Juarez.jpg" alt="Marca 3" class="resizable"></div>
+            <div class="swiper-slide"><img src="./img/muebleria_central.png" alt="Marca 5" class="resizable"></div>
+            <div class="swiper-slide"><img src="./img/Muebleria_portillo.png" alt="Marca 8" class="resizable"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ambientes Únicos. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Link to Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            speed: 3000,
+        });
+    </script>
+    <script>
+        // Intersection Observer para animaciones
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.animated-image');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            images.forEach(image => {
+                observer.observe(image);
+            });
+        });
+    </script>
+</body>
+</html>

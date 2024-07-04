@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambientes Únicos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .product .price {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .product button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Ambientes Únicos</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="products">
+            <article class="product">
+                <img src="./img/donas.jpg" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <p>Descripción breve del producto 1.</p>
+                <p class="price">$10.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+            <article class="product">
+                <img src="./img/fanta.jpg" alt="Producto 2">
+                <h2>Producto 2</h2>
+                <p>Descripción breve del producto 2.</p>
+                <p class="price">$15.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+            <article class="product">
+                <img src="./img/jabon_ace.jpg" alt="Producto 3">
+                <h2>Producto 3</h2>
+                <p>Descripción breve del producto 3.</p>
+                <p class="price">$20.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+            <article class="product">
+                <img src="./img/Mix.jpg" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p>Descripción breve del producto 4.</p>
+                <p class="price">$10.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+            <article class="product">
+                <img src="./img/pasta_dental.jpg" alt="Producto 5">
+                <h2>Producto 5</h2>
+                <p>Descripción breve del producto 5.</p>
+                <p class="price">$10.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+            <article class="product">
+                <img src="./img/takis verdes.jpg" alt="Producto 6">
+                <h2>Producto 6</h2>
+                <p>Descripción breve del producto 6.</p>
+                <p class="price">$10.00</p>
+                <button>Añadir al Carrito</button>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Super Store. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

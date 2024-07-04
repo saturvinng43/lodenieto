@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Asociadas</title>
+    <link rel="stylesheet" href="./css/style_muebles.css">
+</head>
+<body class="loading-main">
+    <!-- Animación de carga -->
+    <div class="loader-container">
+        <div class="loader"></div> <!-- Spinner -->
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Empresas Asociadas</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresas.html">Mueblerias</a></li>
+                <li><a href="Contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 style="text-align: center;">El mueble perfecto</h2> <!-- Título centrado -->
+        
+        <section class="companies">
+            <article class="company" onclick="location.href='https://elmuebleperfecto.com/product/sofa-modena-reclinable-tapiz-beige/';">
+                <img src="./img/el muble perfecto/SOFA-MODE-BG.png" alt="Empresa 1">
+                <h2>Sofa Mode BG</h2>
+            </article>
+            <article class="company" onclick="location.href='https://elmuebleperfecto.com/product/sofa-oxford-power-tapiz-light-grey/';">
+                <img src="./img/el muble perfecto/SOFA-OXFO-LIGREY.png" alt="Empresa 2">
+                <h2>SOFA OXFO LIGREY</h2>
+            </article>
+            <article class="company" onclick="location.href='https://elmuebleperfecto.com/product/sala-esq-escape-reclinable-tapiz-light-gray/';">
+                <img src="./img/el muble perfecto/Sala_ESQ_ESCAPE.jpg" alt="Empresa 3">
+                <h2>Sala ESQ ESCAPE</h2>
+            </article>
+            <article class="company" onclick="location.href='https://elmuebleperfecto.com/product/sala-rimini-esq-izquierda-tapiz-beige/';">
+                <img src="./img/el muble perfecto/SALA-RIMINI-ESQ.png" alt="Empresa 4">
+                <h2>SALA RIMINI ESQ</h2>
+            </article>
+            <article class="company" onclick="location.href='https://elmuebleperfecto.com/product/sillon-alba/';">
+                <img src="./img/el muble perfecto/SILLON ALBA.png" alt="Empresa 1">
+                <h2>SILLON ALBA</h2>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Super Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Simular tiempo de carga
+        setTimeout(function() {
+            const loaderContainer = document.querySelector('.loader-container');
+            const body = document.querySelector('body');
+
+            // Ocultar animación de carga
+            loaderContainer.style.opacity = '0';
+            loaderContainer.style.pointerEvents = 'none'; // Permitir interacción después de ocultar
+
+            // Mostrar contenido principal con transición
+            body.classList.remove('loading-main');
+            body.classList.add('loaded-main');
+        }, 2000); // 2000 milisegundos = 2 segundos
+    </script>
+</body>
+</html>
